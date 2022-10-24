@@ -23,4 +23,9 @@ app.post("/", function (req, res) {
   resultado = Math.min(...altVetor)
   res.send("Os números inseridos válidos são " + vetorNum + "<br/>O menor número inserido não repetido é é "+ resultado)
 });
-
+app.listen(3000, function () {
+  console.log("Server started on port 3000");
+});
+function sortfunction(a, b){
+  return (a - b)
+}
