@@ -16,4 +16,11 @@ app.post("/", function (req, res) {
   let dupChars = vetorNum.filter((element, index) => {
     return vetorNum.indexOf(element) !== index;
 });
+    let index = vetorNum.indexOf(dupChars[0])
+  if (index > -1) {
+    altVetor.splice(index, 2); // 2nd parameter means remove one item only
+  }
+  resultado = Math.min(...altVetor)
+  res.send("Os números inseridos válidos são " + vetorNum + "<br/>O menor número inserido não repetido é é "+ resultado)
+});
 
